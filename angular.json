@@ -18,8 +18,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "./config/webpack.config.js"
+            },
             "outputPath": "dist/tailwind",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -43,6 +46,9 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "customWebpackConfig": { 
+                "path": "config/webpack.config.prod.js"
+              },
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -127,5 +133,8 @@
       }
     }
   },
-  "defaultProject": "tailwind"
+  "defaultProject": "tailwind",
+  "cli": {
+    "analytics": "6e54abc2-49f1-447d-9f72-a203b359a97e"
+  }
 }
