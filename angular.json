@@ -21,7 +21,7 @@
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "customWebpackConfig": {
-              "path": "./config/webpack.config.js"
+              "path": "./webpack.config.js"
             },
             "outputPath": "dist/tailwind",
             "index": "src/index.html",
@@ -46,9 +46,6 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "customWebpackConfig": { 
-                "path": "config/webpack.config.prod.js"
-              },
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
